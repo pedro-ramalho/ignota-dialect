@@ -1,5 +1,6 @@
-#include "../../include/Dialect/IgnotaDialect.h"
+#include "Dialect/IgnotaDialect.h"
 
-void mlir::ignota::IgnotaDialect::initialize() {
+using namespace mlir;
+using namespace mlir::ignota;
 
-}
+IgnotaDialect::IgnotaDialect(mlir::MLIRContext *ctx) : mlir::Dialect("toy", ctx, mlir::TypeID::get<IgnotaDialect>()) {}

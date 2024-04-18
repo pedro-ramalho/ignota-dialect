@@ -5,6 +5,7 @@ set(LIBS
     ${conversion_libs}
     MLIRArithDialect
     MLIROptLib
+    MLIRIgnota
 )
 
 add_subdirectory(Dialect)

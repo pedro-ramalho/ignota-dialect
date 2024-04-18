@@ -6,7 +6,7 @@
 #include <mlir/InitAllDialects.h>
 #include <mlir/Tools/mlir-opt/MlirOptMain.h>
 
-#include "../include/Dialect/IgnotaDialect.h"
+#include "Dialect/IgnotaDialect.h"
 
 int main(int argc, char **argv) {
   mlir::DialectRegistry registry;
