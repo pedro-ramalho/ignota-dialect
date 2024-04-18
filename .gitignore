@@ -2,3 +2,4 @@ build/
 assets/
 cmake-build-debug/
 .idea
+.cache
