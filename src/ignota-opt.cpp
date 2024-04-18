@@ -8,8 +8,9 @@
 
 #include "Dialect/IgnotaDialect.h"
 
-int main(int argc, char **argv) {
+int main(const int argc, char **argv) {
   mlir::DialectRegistry registry;
+
 
   registry.insert<mlir::arith::ArithDialect, mlir::func::FuncDialect,
                   mlir::math::MathDialect, mlir::ignota::IgnotaDialect>();

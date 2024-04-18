@@ -5,8 +5,8 @@
 #include <mlir/IR/Dialect.h>
 #include <mlir/IR/MLIRContext.h>
 
-namespace mlir {
-namespace ignota {
+
+namespace mlir::ignota {
 
 class IgnotaDialect : public mlir::Dialect {
 public:
@@ -16,7 +16,7 @@ public:
 
   void initialize();
 };
-} // namespace ignota
-} // namespace mlir
+} // namespace mlir::ignota
+
 
 #endif // IGNOTA_DIALECT_H
