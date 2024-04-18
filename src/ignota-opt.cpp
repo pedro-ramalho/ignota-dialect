@@ -6,11 +6,13 @@
 #include <mlir/InitAllDialects.h>
 #include <mlir/Tools/mlir-opt/MlirOptMain.h>
 
+#include "../include/Dialect/IgnotaDialect.h"
+
 int main(int argc, char **argv) {
   mlir::DialectRegistry registry;
 
   registry.insert<mlir::arith::ArithDialect, mlir::func::FuncDialect,
-                  mlir::math::MathDialect>();
+                  mlir::math::MathDialect, mlir::ignota::IgnotaDialect>();
 
   mlir::registerAllDialects(registry);
 

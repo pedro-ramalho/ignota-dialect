@@ -7,6 +7,8 @@ set(LIBS
     MLIROptLib
 )
 
+add_subdirectory(Dialect)
+
 add_llvm_executable(ignota-opt ignota-opt.cpp)
 
 llvm_update_compile_flags(ignota-opt)
