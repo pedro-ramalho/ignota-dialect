@@ -4,17 +4,22 @@ The Ignota dialect is being developed in collaboration with SPeCS as part of a s
 
 ## Getting Started
 
+### Prerequisites
+
+In order to run the project you must have a proper installation of LLVM and MLIR in your system. For a comprehensive list of the required packages necessary to build LLVM, please click [here](https://llvm.org/docs/GettingStarted.html#requirements).
+
 ### Dependencies
 
-Dependencies include a proper installation of LLVM and MLIR. Find more information about building LLVM and MLIR [here](https://mlir.llvm.org/getting_started/).
+Dependencies include:
+- CMake, version >= 3.20.0
+- Ninja, version >= 1.10.0
+- Clang, version >= 14.0.0
 
-If you didn't explicitly specify an installation directory, LLVM and MLIR's libraries will be placed in the `/usr/local` directory.
+### Utilities
 
-It is advisable to ensure that the generated binaries (such as `mlir-opt`) are accessible system-wide.
+For code editing features, navigation, analysis, suggestions and assistants, you may use LLVM's official LSP, Clangd. The file `.clangd` placed in the root of this repository provides a very simple configuration of this LSP.
 
 ### Building
-
-In order to build this project, CMake and Ninja must be installed.
 
 When all pre-requisites are met, simply run:
 
