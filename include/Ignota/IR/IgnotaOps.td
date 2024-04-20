@@ -50,4 +50,35 @@ def Ignota_FooOp : Ignota_Op<"foo", [Pure,
     }];
 }
 
+def Ignota_PowfOp : Ignota_Op<"powf", [Pure, SameOperandsAndResultType]> {
+    let summary = "Raises a floating-point number to the power of another.";
+
+    let description = [{
+        The `ignota.powf` operation raises a floating-point number to the power
+        of another.
+
+        Example:
+
+        ```mlir
+        %0 = arith.constant 2.0 : f32
+        %1 = arith.constant 3.0 : f32
+
+        // Compute 2.0 ^ 3.0
+        %2 = ignota.powf %0, %1 : f32
+    }];
+
+    let arguments = (ins
+        F32:$base,
+        F32:$exponent
+    );
+
+    let results = (outs 
+        F32:$result
+    );
+
+    let assemblyFormat = [{
+        $base `,` $exponent attr-dict `:` type($result)
+    }];
+}
+
 #endif // IGNOTA_DIALECT
