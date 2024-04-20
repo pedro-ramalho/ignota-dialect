@@ -4,12 +4,10 @@
 #include "mlir/Support/FileUtilities.h"
 #include "mlir/Tools/mlir-opt/MlirOptMain.h"
 
-#include "Ignota/IgnotaDialect.h"
-#include "Ignota/IgnotaPasses.h"
+#include "Ignota/IR/IgnotaOps.h"
 
 int main(int argc, char **argv) {
   mlir::registerAllPasses();
-  mlir::ignota::registerPasses();
   // TODO: Register ignota passes here.
 
   mlir::DialectRegistry registry;
