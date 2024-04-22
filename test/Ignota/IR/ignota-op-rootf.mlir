@@ -1,12 +1,11 @@
 // RUN: ignota-opt %s | ignota-opt | FileCheck %s
 
 module {
-    // CHECK-LABEL: func @test_root()
-    func.func @test_root() {
-        %m = arith.constant 2.0 : f32
-        %n = arith.constant 16.0 : f32
-
-        %r = ignota.rootf %m, %n : f32
+    // CHECK-LABEL: @rootf(
+	// CHECK-SAME: 		   %[[F:.*]]: f32)
+    func.func @rootf(%f: f32) {
+		// CHECK: %{{.*}} = ignota.rootf %[[F]], %[[F]] : f32
+        %r = ignota.rootf %f, %f : f32
 
         return
     }
