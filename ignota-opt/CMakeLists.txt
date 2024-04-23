@@ -7,7 +7,8 @@ set(LIBS
         ${conversion_libs}
         MLIRArithDialect
         MLIROptLib
-        MLIRIgnota
+        MLIRIgnotaOps
+        MLIRIgnotaPasses
         )
 add_llvm_executable(ignota-opt ignota-opt.cpp)
 
